@@ -4,6 +4,35 @@
 }
 .Nav {
     height: 50px;
-    background-color: #994fe0;
-    border: 2px solid black;
+    background-color: #141619;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Nav-logo {
+    font-size: 20px;
+    margin-left: 25px;
+    font-weight: 900;
+}
+
+.Nav-logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.Nav-links a {
+    font-size: 20px;
+    margin-right: 25px;
+    font-weight: 900;   
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.Nav-links a:hover {
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
 }
