@@ -42,3 +42,15 @@ body {
     padding: 10px;
     border-radius: 10px;
 }
+
+.main-section {
+    background-image: url('assets/Main banner.png');
+    height: 100px;
+    width: 100px;
+}
+
+.main-banner img {
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
