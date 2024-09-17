@@ -5,12 +5,12 @@
 
 body {
     font-family: "Audiowide", sans-serif;
-    background-color: #F5F5F5;
+    background-color: #331c52;
 }
 
 .Nav {
     height: 50px;
-    background-color: #141619;
+    background-color: #8121d0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +38,7 @@ body {
 }
 
 .Nav-links a:hover {
-    background-color: green;
+    background-color: red;
     padding: 10px;
     border-radius: 10px;
 }
@@ -53,4 +53,19 @@ body {
     height: 100%;
     background-position: center;
     background-size: cover;
+}
+
+.introduction-section {
+    background-color: black;
+    width: 25%;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.my-introduction {
+    color: white;
+}
+
+.My-name {
+    color: red;
 }
