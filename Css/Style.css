@@ -43,29 +43,19 @@ body {
     border-radius: 10px;
 }
 
-.main-section {
-    background-image: url('assets/Main banner.png');
-    height: 100px;
-    width: 100px;
-}
-
-.main-banner img {
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-
 .introduction-section {
-    background-color: black;
-    width: 25%;
-    font-size: 25px;
-    text-align: justify;
+    border: 2px solid red;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
 }
 
-.my-introduction {
+.intro-title {
     color: white;
 }
 
-.My-name {
-    color: red;
+.intro-caption {
+    color: yellow;
+    text-align: end;
+    font-size: 20px;
 }
