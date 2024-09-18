@@ -50,7 +50,10 @@ body {
 
 .intro-title {
     color: white;
-    font-size: 34px;
+    font-size: 70px;
+    border-bottom: 3px solid white;
+    text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
 .intro-caption {
@@ -61,29 +64,32 @@ body {
 }
 
 .website-content {
+    height: 80vh;
     width: 50%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
 }
 
-
-
-
-/* under-maintenance designing */
-.under-maintenance-popup {
-    margin: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.under-maintenance-popup-btn {
-    display: block;
-    margin: auto;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: 700;
-    background-color: red;
+.intro-description {
+    width: 80%;
     color: white;
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.intro-description p {
+    line-height: 30px;
+}
+
+.website-content .intro-description p span {
+    color: yellow;
+    font-weight: bold;
+    border-bottom: 1px solid white;
 }
 
 
