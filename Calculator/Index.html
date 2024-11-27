@@ -20,7 +20,6 @@
         ">AC</button>
 
         <button class="clearbutton">DEL</button>
-
         <button>%</button>
         <button>/</button>
         
@@ -29,7 +28,10 @@
          document.querySelector('#display').value = display;
         ">7</button>
         
-        <button>8</button>
+        <button onclick="
+        display = display + 8;
+        document.querySelector('#display').value = display;
+       ">8</button>
         
         <button onclick="
         display = display + 9;
@@ -37,16 +39,51 @@
        ">9</button>
         
         <button>X</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
+
+        <button onclick="
+        display = display + 4;
+        document.querySelector('#display').value = display;
+       ">4</button>
+
+        <button onclick="
+        display = display + 5;
+        document.querySelector('#display').value = display;
+       ">5</button>
+
+        <button onclick="
+        display = display + 6;
+        document.querySelector('#display').value = display;
+       ">6</button>
+
         <button>-</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
+
+        <button onclick="
+        display = display + 1;
+        document.querySelector('#display').value = display;
+       ">1</button>
+
+        <button onclick="
+        display = display + 2;
+        document.querySelector('#display').value = display;
+       ">2</button>
+
+        <button onclick="
+        display = display + 3;
+        document.querySelector('#display').value = display;
+       ">3</button>
+
         <button>+</button>
-        <button>00</button>
-        <button>0</button>
+
+        <button onclick="
+        display = display + 00;
+        document.querySelector('#display').value = display;
+       ">00</button>
+
+        <button onclick="
+        display = display + 0;
+        document.querySelector('#display').value = display;
+       ">0</button>
+
         <button>.</button>
         <button class="answerbutton">=</button>
       </div>
