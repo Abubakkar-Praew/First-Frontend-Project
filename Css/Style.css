@@ -19,10 +19,14 @@ Nav {
 a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    margin: 0px 20px;
+    padding: 5px 5px;
 }
 
 nav a:hover {
     background-color: #331c52;
+    border-bottom: 1px solid white;
+}
+
+.cloneProjects {
+    background-color: #970747;
 }
