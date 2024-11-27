@@ -8,12 +8,11 @@ body {
     background-color: #331c52;
 }
 
-.Nav {
-    height: 50px;
-    background-color: #8121d0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+Nav {
+    background-color: #273DB4;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
 .Nav-logo {
