@@ -9,7 +9,7 @@ body {
 }
 
 Nav {
-    background-color: #273DB4;
+    background-color: #F53163;
     color: white;
     font-weight: bolder;
     text-transform: uppercase;
@@ -17,7 +17,7 @@ Nav {
 }
 
 a {
-    color: white;
+    color: black;
     text-decoration: none;
     padding: 5px 5px;
 }
@@ -25,8 +25,26 @@ a {
 nav a:hover {
     background-color: #331c52;
     border-bottom: 1px solid white;
+    color: white;
+    transition: .10s;
 }
 
-.cloneProjects {
-    background-color: #970747;
+.mainSection {
+    color: white;
+    width: 60%;
+    margin: 10% auto;
+}
+
+.mainSection p {
+    font-size : 1.2rem;
+    text-align: justify;
+}
+
+.mainSection p a {
+    color: white;
+    text-decoration: underline;
+}
+
+.mainSection p a:hover {
+    color: #F53163;
 }
