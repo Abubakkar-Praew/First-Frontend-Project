@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  margin: 15px;
+}
+
+body {
+  background-color: rgb(219, 214, 214);
+}
+
+.mainContainer {
+  width: 40%;
+  background-color: green;
+  border-radius: 10px;
+  padding-bottom: 25px;
+}
+
+#display {
+  width: 93%;
+  margin: 20px;
+  font-size: 35px;
+  outline: none;
+  border: 5px solid black;
+}
+
+.buttonContainer {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  width: 22%;
+  height: 75px;
+  margin: 5px;
+  font-size: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: rgb(43, 226, 110);
+}
+
+.clearbutton {
+  background-color: red;
+}
+.clearbutton:active {
+  background-color: rgb(43, 226, 110);
+}
+.answerbutton {
+  background-color: yellow;
+}
+
+.answerbutton:active {
+  background-color: rgb(43, 226, 110);
+}
