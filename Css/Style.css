@@ -1,7 +1,8 @@
 * {
-    padding: 0;
     margin: 0;
-}
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 body {
     font-family: "Audiowide", sans-serif;
@@ -32,7 +33,11 @@ nav a:hover {
 .mainSection {
     color: white;
     width: 60%;
-    margin: 10% auto;
+    margin: auto;
+}
+
+.introduction {
+  margin: 15% auto;
 }
 
 .mainSection p {
@@ -47,4 +52,66 @@ nav a:hover {
 
 .mainSection p a:hover {
     color: #F53163;
+}
+
+
+
+
+/* Calculator */
+
+.mainContainer {
+    width: 80%;
+    background-color: green;
+    border-radius: 10px;
+    padding-bottom: 25px;
+    margin-top: 10px;
+  }
+  
+  #display {
+    width: 93%;
+    margin: 20px;
+    font-size: 35px;
+    outline: none;
+    border: 5px solid black;
+  }
+  
+  .buttonContainer {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    width: 22%;
+    height: 75px;
+    margin: 5px;
+    font-size: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:active {
+    background-color: rgb(43, 226, 110);
+  }
+  
+  .clearbutton {
+    background-color: red;
+  }
+  .clearbutton:active {
+    background-color: rgb(43, 226, 110);
+  }
+  .answerbutton {
+    background-color: yellow;
+  }
+  
+  .answerbutton:active {
+    background-color: rgb(43, 226, 110);
+  }
+
+
+.hidden {
+  display: none;
 }

@@ -9,7 +9,7 @@
   </head>
   <body class="main-body">
       <nav>
-        <a href="Calculator/Index.html">Calculator</a>
+        <a href="#" onclick="calculatorDisplay()">Calculator</a>
         <a href="#">Todo List</a>
         <a href="#">GK Quiz</a>
         <a href="#">Digital Clock</a>
@@ -21,13 +21,99 @@
         <a href="#">GSC CRM CLONE</a>
       </nav>
       <main class="mainSection">
+
+        <!-- introduction section -->
+        <div class="introduction">
           <h1>Hello! I'm Muhammad Abubakkar 🙂</h1>
-          <p>I'm a self-taught, award-winning <a href="https://www.w3schools.com/whatis/whatis_frontenddev.asp" class="mainIntroLink">Front-End Developer</a> and <a href="https://developers.google.com/community/stories/story-56467a5c#:~:text=The%20Google%20Developer%20Experts%20program%20is%20a%20community%20of%20distinguished,other%20developers%20and%20tech%20communities." mainIntroLink>Google Developer Expert</a> in Accessibility Core Competencies.</p>
+          <p>I'm a self-taught, award-winning <a href="https://www.w3schools.com/whatis/whatis_frontenddev.asp" class="mainIntroLink">Front-End Developer</a> and <a href="https://en.wikipedia.org/wiki/Google_Developer_Expert" mainIntroLink>Google Developer Expert</a> in Accessibility Core Competencies.</p>
           <p>I specialize in creating fully responsive, accessible, and visually stunning websites using <a href="https://www.w3schools.com/html/html_intro.asp" class="mainIntroLink">HTML,</a> <a href="https://www.w3schools.com/css/css_intro.asp" class="mainIntroLink">CSS,</a> <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" class="mainIntroLink">Bootstrap,</a> and <a href="https://www.w3schools.com/js/js_intro.asp" class="mainIntroLink">JavaScript.</a> My work focuses on delivering seamless user experiences across all devices.</p>
           <p>Passionate about diversity and inclusion in tech, I actively mentor and support initiatives for underrepresented groups, striving to make the industry more inclusive for everyone.</p>
+        </div>
+
+        <!-- Calculator Section -->
+         <div id="Calculator" class="mainContainer hidden">
+          <div class="displayConstainer">
+            <input type="text" id="display" readonly>
+          </div>
+          <div class="buttonContainer">
+    
+            <button class="clearbutton" onclick="
+              display = '';
+              document.querySelector('#display').value = display;  
+            ">AC</button>
+    
+            <button class="clearbutton">DEL</button>
+            <button>%</button>
+            <button>/</button>
+            
+            <button onclick="
+             display = display + 7
+             document.querySelector('#display').value = display;
+            ">7</button>
+            
+            <button onclick="
+            display = display + 8;
+            document.querySelector('#display').value = display;
+           ">8</button>
+            
+            <button onclick="
+            display = display + 9;
+            document.querySelector('#display').value = display;
+           ">9</button>
+            
+            <button>X</button>
+    
+            <button onclick="
+            display = display + 4;
+            document.querySelector('#display').value = display;
+           ">4</button>
+    
+            <button onclick="
+            display = display + 5;
+            document.querySelector('#display').value = display;
+           ">5</button>
+    
+            <button onclick="
+            display = display + 6;
+            document.querySelector('#display').value = display;
+           ">6</button>
+    
+            <button>-</button>
+    
+            <button onclick="
+            display = display + 1;
+            document.querySelector('#display').value = display;
+           ">1</button>
+    
+            <button onclick="
+            display = display + 2;
+            document.querySelector('#display').value = display;
+           ">2</button>
+    
+            <button onclick="
+            display = display + 3;
+            document.querySelector('#display').value = display;
+           ">3</button>
+    
+            <button>+</button>
+    
+            <button onclick="
+            display = display + 0 + 0;
+            document.querySelector('#display').value = display;
+           ">00</button>
+    
+            <button onclick="
+            display = display + 0;
+            document.querySelector('#display').value = display;
+           ">0</button>
+    
+            <button>.</button>
+            <button class="answerbutton">=</button>
+          </div>
+         </div>
       </main>
 
-    <script src="Script/style.js"></script>
-    <script src="Script/maintenance-sheet.js"></script>
+      <script src="Script/bootstrap.js"></script>
+      <script src="Script/style.js"></script>
   </body>
 </html>
