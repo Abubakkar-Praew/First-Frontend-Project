@@ -13,91 +13,10 @@ Nav {
     color: white;
     font-weight: bolder;
     text-transform: uppercase;
+    text-align: center;
 }
 
-.Nav-logo {
-    font-size: 20px;
-    margin-left: 25px;
-    font-weight: 900;
-}
-
-.Nav-logo a {
+a {
     color: white;
     text-decoration: none;
-}
-
-.Nav-links a {
-    font-size: 20px;
-    margin-right: 25px;
-    font-weight: 900;   
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.Nav-links a:hover {
-    background-color: red;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.introduction-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.intro-title {
-    color: white;
-    font-size: 70px;
-    border-bottom: 3px solid white;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.intro-caption {
-    color: yellow;
-    text-align: end;
-    font-size: 20px;
-    margin-right: 16px;
-}
-
-.website-content {
-    height: 80vh;
-    width: 50%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-}
-
-.intro-description {
-    width: 80%;
-    color: white;
-    font-size: 20px;
-    text-align: justify;
-    margin-top: 20px;
-}
-
-.intro-description p {
-    line-height: 30px;
-}
-
-.website-content .intro-description p span {
-    color: yellow;
-    font-weight: bold;
-    border-bottom: 1px solid white;
-}
-
-
-/* Unity Classes */
-.hide {
-    visibility: hidden;
-    display: none;
-}
-
-.show {
-    visibility: visible;
 }
