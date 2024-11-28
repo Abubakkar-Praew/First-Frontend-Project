@@ -42,45 +42,46 @@
               document.querySelector('#display').value = display;  
             ">AC</button>
     
-            <button class="clearbutton">DEL</button>
+            <button class="clearbutton" onclick="
+            display = display.substring(0, display.length -1);
+            document.querySelector('#display').value = display;
+            ">DEL</button>
 
             <button onclick="
-              display = display + %
-              document.querySelector('#display').value = display;
-            ">%</button>
+            display = display * display;
+              document.querySelector('#display').value = display;            
+            ">X<sup>2</sup></button>
 
             <button onclick="
-            
-              display = display + /
+              display = display + '/';
               document.querySelector('#display').value = display;
             ">/</button>
-            
+
             <button onclick="
              display = display + 7
              document.querySelector('#display').value = display;
             ">7</button>
-            
+
             <button onclick="
             display = display + 8;
             document.querySelector('#display').value = display;
            ">8</button>
-            
+
             <button onclick="
             display = display + 9;
             document.querySelector('#display').value = display;
            ">9</button>
-            
+
             <button onclick="
-            
-            display = display + X
+            display = display + '*';
             document.querySelector('#display').value = display;
             ">X</button>
-    
+
             <button onclick="
             display = display + 4;
             document.querySelector('#display').value = display;
            ">4</button>
-    
+
             <button onclick="
             display = display + 5;
             document.querySelector('#display').value = display;
@@ -93,7 +94,7 @@
     
             <button onclick="
             
-              display = display + -;
+              display = display + '-';
               document.querySelector('#display').value = display;
             ">-</button>
     
@@ -114,7 +115,7 @@
     
             <button onclick="
             
-              display = display + +;
+              display = display + '+';
               document.querySelector('#display').value = display;
             ">+</button>
     
@@ -129,12 +130,13 @@
            ">0</button>
     
             <button onclick="
-              display = display + .;
+              display = display + '.';
               document.querySelector('#display').value = display;
             ">.</button>
 
             <button class="answerbutton" onclick="
             display = eval(display);
+            document.querySelector('#display').value = display;
             ">=</button>
             
           </div>

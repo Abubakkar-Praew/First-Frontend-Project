@@ -92,6 +92,15 @@ nav a:hover {
     border-radius: 5px;
     cursor: pointer;
   }
+
+  input {
+    width: 22%;
+    height: 75px;
+    margin: 5px;
+    font-size: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   
   button:active {
     background-color: rgb(43, 226, 110);
