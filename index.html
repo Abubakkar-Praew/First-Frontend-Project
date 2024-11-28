@@ -48,14 +48,11 @@
             ">DEL</button>
 
             <button onclick="
-            display = display * display;
+            display = display + display;
               document.querySelector('#display').value = display;            
             ">X<sup>2</sup></button>
 
-            <button onclick="
-              display = display + '/';
-              document.querySelector('#display').value = display;
-            ">/</button>
+            <button onclick="appendOperator('/')">/</button>
 
             <button onclick="
              display = display + 7
@@ -72,10 +69,7 @@
             document.querySelector('#display').value = display;
            ">9</button>
 
-            <button onclick="
-            display = display + '*';
-            document.querySelector('#display').value = display;
-            ">X</button>
+            <button onclick="appendOperator('*')"">X</button>
 
             <button onclick="
             display = display + 4;
@@ -92,11 +86,7 @@
             document.querySelector('#display').value = display;
            ">6</button>
     
-            <button onclick="
-            
-              display = display + '-';
-              document.querySelector('#display').value = display;
-            ">-</button>
+            <button onclick="appendOperator('-')"">-</button>
     
             <button onclick="
             display = display + 1;
@@ -113,11 +103,7 @@
             document.querySelector('#display').value = display;
            ">3</button>
     
-            <button onclick="
-            
-              display = display + '+';
-              document.querySelector('#display').value = display;
-            ">+</button>
+            <button onclick="appendOperator('+')">+</button>
     
             <button onclick="
             display = display + 0 + 0;
@@ -128,11 +114,8 @@
             display = display + 0;
             document.querySelector('#display').value = display;
            ">0</button>
-    
-            <button onclick="
-              display = display + '.';
-              document.querySelector('#display').value = display;
-            ">.</button>
+
+            <button onclick="appendOperator('.')">.</button>
 
             <button class="answerbutton" onclick="
             display = eval(display);
