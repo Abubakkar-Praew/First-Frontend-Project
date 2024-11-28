@@ -44,8 +44,16 @@
     
             <button class="clearbutton">DEL</button>
 
-            <button>%</button>
-            <button>/</button>
+            <button onclick="
+              display = display + %
+              document.querySelector('#display').value = display;
+            ">%</button>
+
+            <button onclick="
+            
+              display = display + /
+              document.querySelector('#display').value = display;
+            ">/</button>
             
             <button onclick="
              display = display + 7
@@ -62,7 +70,11 @@
             document.querySelector('#display').value = display;
            ">9</button>
             
-            <button>X</button>
+            <button onclick="
+            
+            display = display + X
+            document.querySelector('#display').value = display;
+            ">X</button>
     
             <button onclick="
             display = display + 4;
@@ -79,7 +91,11 @@
             document.querySelector('#display').value = display;
            ">6</button>
     
-            <button>-</button>
+            <button onclick="
+            
+              display = display + -;
+              document.querySelector('#display').value = display;
+            ">-</button>
     
             <button onclick="
             display = display + 1;
@@ -96,7 +112,11 @@
             document.querySelector('#display').value = display;
            ">3</button>
     
-            <button>+</button>
+            <button onclick="
+            
+              display = display + +;
+              document.querySelector('#display').value = display;
+            ">+</button>
     
             <button onclick="
             display = display + 0 + 0;
@@ -108,8 +128,15 @@
             document.querySelector('#display').value = display;
            ">0</button>
     
-            <button>.</button>
-            <button class="answerbutton">=</button>
+            <button onclick="
+              display = display + .;
+              document.querySelector('#display').value = display;
+            ">.</button>
+
+            <button class="answerbutton" onclick="
+            display = eval(display);
+            ">=</button>
+            
           </div>
          </div>
       </main>
