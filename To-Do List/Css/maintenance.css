@@ -1,0 +1,23 @@
+/* under-maintenance designing */
+.under-maintenance-popup {
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.under-maintenance-popup-btn {
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: red;
+    border-radius: 15px;
+    color: white;
+}
+
+.under-maintenance-popup-btn:hover {
+    background-color: green;
+    transition: 0.3s ease-in;
+}
