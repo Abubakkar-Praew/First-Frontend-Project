@@ -42,9 +42,18 @@ body {
     background-color: #71bd0f;
 }
 
+/* General Classes */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
 /* Login page style  */
 
-.signinBox {
+.signinBox, .forgetPasswordBox {
     width: 30%;
     background-color: white;
     border: 1px solid black;
@@ -109,5 +118,77 @@ body {
 }
 
 .signinBoxFooter p {
+    font-weight: bolder;
+}
+
+
+/* Signup page style  */
+
+.signupBox {
+    width: 30%;
+    background-color: white;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0;
+}
+
+.signupBoxHearder h2 {
+    margin: 0;
+    margin-top: 25px;
+}
+
+.signupBoxHearder p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.signupBoxInputs {
+    margin-bottom: 15px;
+}
+
+.signupBoxInputs input {
+    width: 85%;
+    margin: 15PX 0px;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: #d9d9d9;
+    border: none;
+}
+
+.signupBoxInputs input:focus {
+    border: none;
+}
+
+.signupBoxInputs button {
+    width: 85%;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ff66c4;
+}
+
+.signupBoxInputs button:hover {
+    background-color: #c52788;
+}
+
+.signupBoxFooter {
+    margin: 40px 0px;
+}
+
+.signupBoxFooter a{
+    color: #4b00df;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.signupBoxFooter p {
     font-weight: bolder;
 }
