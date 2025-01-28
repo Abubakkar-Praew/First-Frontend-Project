@@ -104,6 +104,11 @@ body {
     background-color: #ff66c4;
 }
 
+.signinBoxInputs button a {
+    text-decoration: none;
+    color: black;
+}
+
 .signinBoxInputs button:hover {
     background-color: #c52788;
 }

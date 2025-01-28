@@ -14,15 +14,20 @@
             <h1>Life Easy Todo-List Login</h1>
             <button><a href="/index.html">Portfolio</a></button>
         </nav>
+
+
+        <!-- Sign in Box -->
         <div class="signinBox animate__animated animate__zoomIn">
             <div class="signinBoxHearder">
                 <h2>Welcome Back</h2>
                 <p>Enter your Credential to login</p>
             </div>
             <div class="signinBoxInputs">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button type="submit">Login</button>
+                <input class="SignUsername" type="email" placeholder="Username" required>
+                <input class="SignPassword" type="password" placeholder="Password">
+                <button type="submit" class="SigninButton">Sign in
+                    <!-- <a href="dashboard.html">Lgin</a> -->
+                </button>
             </div>
             <div class="signinBoxFooter">
                 <a href="#" class="forgetPassword" onclick="forgetFunction ()">Forgot password?</a>
@@ -30,6 +35,7 @@
             </div>
         </div>
 
+        
         <!-- Recovery Box -->
         <div class="forgetPasswordBox hidden animate__animated animate__zoomIn">
             <div class="signinBoxHearder">
@@ -45,6 +51,7 @@
             </div>
         </div>
 
+        <!-- sign up box -->
         <div class="signupBox hidden animate__animated animate__zoomIn">
             <div class="signupBoxHearder">
                 <h2>Sign Up</h2>
