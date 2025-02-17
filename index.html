@@ -3,130 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PDAOFFICIAL.COM</title>
-    <link rel="stylesheet" href="Css/bootstrap.css"/>
-    <link rel="stylesheet" href="Css/Style.css">
+    <title>Muhammad Abubakkar - Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/Css/Style.css" />
   </head>
-  <body class="main-body">
-      <nav>
-        <a href="#" onclick="calculatorDisplay()">Calculator</a>
-        <a href="To-Do List/index.html">Todo List</a>
-        <a href="#" onclick="error()">GK Quiz</a>
-        <a href="#" onclick="error()">Digital Clock</a>
-        <a href="#" onclick="error()">Dictionary</a>
-        <a href="#" onclick="error()">Weather</a>
-        <a href="#" onclick="error()">Chat Application</a>
-        <a href="#" onclick="error()">Currency Converter</a>
-        <a href="#" onclick="error()">Analytics App</a>
-        <a href="#" onclick="error()">GSC CRM CLONE</a>
-      </nav>
-      <main class="mainSection">
 
-        <!-- introduction section -->
-        <div class="introduction">
-          <h1>Hello! I'm Muhammad Abubakkar 🙂</h1>
-          <p>I'm a self-taught, award-winning <a href="https://www.w3schools.com/whatis/whatis_frontenddev.asp" class="mainIntroLink">Front-End Developer</a> and <a href="https://en.wikipedia.org/wiki/Google_Developer_Expert" mainIntroLink>Google Developer Expert</a> in Accessibility Core Competencies.</p>
-          <p>I specialize in creating fully responsive, accessible, and visually stunning websites using <a href="https://www.w3schools.com/html/html_intro.asp" class="mainIntroLink">HTML,</a> <a href="https://www.w3schools.com/css/css_intro.asp" class="mainIntroLink">CSS,</a> <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" class="mainIntroLink">Bootstrap,</a> and <a href="https://www.w3schools.com/js/js_intro.asp" class="mainIntroLink">JavaScript.</a> My work focuses on delivering seamless user experiences across all devices.</p>
-          <p>Passionate about diversity and inclusion in tech, I actively mentor and support initiatives for underrepresented groups, striving to make the industry more inclusive for everyone.</p>
+  <body>
+    <!-- Navigation Bar -->
+
+    <header>
+      <nav class="navbar">
+        <div class="menu-toggle">
+          <i class="fa-solid fa-toggle-off"></i>
         </div>
 
-        <!-- Calculator Section -->
-         <div id="Calculator" class="mainContainer hidden">
-          <div class="displayConstainer">
-            <input type="text" id="display" readonly>
-          </div>
-          <div class="buttonContainer">
-    
-            <button class="clearbutton" onclick="
-              display = '';
-              document.querySelector('#display').value = display;  
-            ">AC</button>
+        <div class="logo">
+          <a href="index.html">Abubakkar Praew</a>
+        </div>
 
-            <button class="clearbutton" onclick="
-            display = display.substring(0, display.length -1);
-            document.querySelector('#display').value = display;
-            ">DEL</button>
+        <div class="navbarPages">
+          <ul>
+            <li><a href="#" onclick="maintenance ()">Services</a></li>
+            <li><a href="#" onclick="maintenance ()">Portfolio</a></li>
+            <li><a href="#" onclick="maintenance ()">Projects</a></li>
+            <li><a href="#" onclick="maintenance ()">Contact Me</a></li>
+          </ul>
+        </div>
 
-            <button onclick="
-            display = display * display;
-              document.querySelector('#display').value = display;            
-            ">X<sup>2</sup></button>
+        <!-- Second Language Bar -->
+        <div class="language">
+          <ul>
+            <li class="mainLang">English</li>
+            <ul class="langDropdown">
+              <li>English</li>
+              <li>Thai</li>
+              <li>Urdu</li>
+              <li>French</li>
+              <li>Spanish</li>
+              <li>Russian</li>
+              <li>Japanese</li>
+              <li>Korean</li>
+            </ul>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-            <button onclick="appendOperator('/')">/</button>
+    <!-- General Loading -->
+    <div id="loadingOverlay">
+      <div class="loader"></div>
+    </div>
 
-            <button onclick="
-             display = display + 7
-             document.querySelector('#display').value = display;
-            ">7</button>
-
-            <button onclick="
-            display = display + 8;
-            document.querySelector('#display').value = display;
-           ">8</button>
-
-            <button onclick="
-            display = display + 9;
-            document.querySelector('#display').value = display;
-           ">9</button>
-
-            <button onclick="appendOperator('*')"">X</button>
-
-            <button onclick="
-            display = display + 4;
-            document.querySelector('#display').value = display;
-           ">4</button>
-
-            <button onclick="
-            display = display + 5;
-            document.querySelector('#display').value = display;
-           ">5</button>
-    
-            <button onclick="
-            display = display + 6;
-            document.querySelector('#display').value = display;
-           ">6</button>
-    
-            <button onclick="appendOperator('-')"">-</button>
-    
-            <button onclick="
-            display = display + 1;
-            document.querySelector('#display').value = display;
-           ">1</button>
-    
-            <button onclick="
-            display = display + 2;
-            document.querySelector('#display').value = display;
-           ">2</button>
-    
-            <button onclick="
-            display = display + 3;
-            document.querySelector('#display').value = display;
-           ">3</button>
-    
-            <button onclick="appendOperator('+')">+</button>
-    
-            <button onclick="
-            display = display + 0 + 0;
-            document.querySelector('#display').value = display;
-           ">00</button>
-    
-            <button onclick="
-            display = display + 0;
-            document.querySelector('#display').value = display;
-           ">0</button>
-
-            <button onclick="appendOperator('.')">.</button>
-
-            <button class="answerbutton" onclick="
-            display = eval(display);
-            document.querySelector('#display').value = display;
-            ">=</button>
-            
-          </div>
-         </div>
-      </main>
-
-      <script src="Script/bootstrap.js"></script>
-      <script src="Script/style.js"></script>
+    <script src="Script/Script.js"></script>
   </body>
 </html>

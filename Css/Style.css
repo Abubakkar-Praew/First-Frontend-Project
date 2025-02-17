@@ -1,126 +1,165 @@
-* {
+/* General Styles */
+body, ul {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #111723;
   }
-
-body {
-    font-family: "Audiowide", sans-serif;
-    background-color: #331c52;
-}
-
-Nav {
-    background-color: #F53163;
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #044fc8;
+    height: 35px;
+    padding: 0px 5%;
     color: white;
-    font-weight: bolder;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-a {
-    color: black;
+  }
+  
+  .navbarPages UL {
+    background-color: #044fc8;
+  }
+  
+  .logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
     text-decoration: none;
-    padding: 5px 5px;
-}
-
-nav a:hover {
-    background-color: #331c52;
-    border-bottom: 1px solid white;
-    color: white;
-    transition: .10s;
-}
-
-.mainSection {
-    color: white;
-    width: 60%;
-    margin: auto;
-}
-
-.introduction {
-  margin: 15% auto;
-}
-
-.mainSection p {
-    font-size : 1.2rem;
-    text-align: justify;
-}
-
-.mainSection p a {
-    color: white;
-    text-decoration: underline;
-}
-
-.mainSection p a:hover {
-    color: #F53163;
-}
-
-
-
-
-/* Calculator */
-
-.mainContainer {
-    width: 80%;
-    background-color: green;
-    border-radius: 10px;
-    padding-bottom: 25px;
-    margin-top: 10px;
   }
   
-  #display {
-    width: 93%;
-    margin: 20px;
-    font-size: 35px;
-    outline: none;
-    border: 5px solid black;
+  .logo a:hover {
+    color: yellow;
   }
   
-  .buttonContainer {
-    width: 90%;
-    margin: auto;
+  .navbarPages ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbarPages ul li {
+    margin: 0 15px;
+  }
+  
+  .navbarPages ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navbarPages ul li a:hover {
+    border-bottom: 1PX solid yellow;
+    padding-bottom: 6px;
+    color: yellow;
+  }
+  
+  /* Language Dropdown */
+  .language {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .mainLang {
+    background: #044fc8;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    list-style: none;
+  }
+  
+  .langDropdown {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background: #044fc8;
+    color: white;
+    list-style: none;
+    padding: 5px;
+    display: none;
+    border-radius: 5px;
+  }
+  
+  .language:hover .langDropdown {
+    display: block;
+  }
+  
+  .langDropdown li{
+    margin-top: 5px;
+    padding: 5px;
+  }
+  
+  .langDropdown li:hover {
+    color: yellow;
+    border-bottom: 1px solid yellow;
+  }
+  
+  /* Toggle Button */
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .navbarPages {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      background: #333;
+      display: none;
+      margin: 0;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbarPages ul {
+      flex-direction: column;
+      background-color: rgb(4, 79, 200, 0.8);
+    }
+  
+    .navbarPages ul li {
+      padding: 10px 0;
+    }
+  
+    .navbarPages.active {
+      display: flex;
+      top: 35px;
+      padding: 0;
+    }
+  }
+  
+  /* Loading Overlay */
+  #loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    z-index: 9999;
+    display: none;
   }
   
-  button {
-    width: 22%;
-    height: 75px;
-    margin: 5px;
-    font-size: 2rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  input {
-    width: 22%;
-    height: 75px;
-    margin: 5px;
-    font-size: 2rem;
-    border-radius: 5px;
-    cursor: pointer;
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fff;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
   }
   
-  button:active {
-    background-color: rgb(43, 226, 110);
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
   
-  .clearbutton {
-    background-color: red;
-  }
-  .clearbutton:active {
-    background-color: rgb(43, 226, 110);
-  }
-  .answerbutton {
-    background-color: yellow;
-  }
-  
-  .answerbutton:active {
-    background-color: rgb(43, 226, 110);
-  }
-
-
-.hidden {
-  display: none;
-}
