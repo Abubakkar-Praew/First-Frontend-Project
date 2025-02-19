@@ -1,12 +1,12 @@
 /* General Styles */
 * {
-  font-family: "poppin", sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body, ul {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     background-color: #f9f9f9;
   }
   
@@ -15,6 +15,9 @@ body, ul {
     justify-content: space-between;
     align-items: center;
     background-color: #044fc8;
+    position: fixed;
+    top: 0;
+    width: 100%;
     height: 35px;
     padding: 0px 5%;
     color: white;
@@ -106,16 +109,29 @@ body, ul {
 
   /* Introduction Style */
   main {
-    /* background: rgba(0, 0, 0, 0.6); */
-    /* background-color: #63cfda; */
     background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    height: 97.7vh;
   }
   
   .hero {
-    padding: 40px;
     width: 80%;
-    margin: auto;
+    height: 100vh;
+    padding: 40px;
     display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-container div h1 span {
+  color: #0a1459;
+  text-decoration: underline;
+  font-weight: bolder;
 }
 
 .hero img {
@@ -129,6 +145,7 @@ body, ul {
     font-weight: bolder;
     text-align: center;
     color: #0a1459;
+    margin-bottom: 10px;
 }
 .hero p {
     font-size: 1.2rem;
@@ -175,6 +192,7 @@ body, ul {
   height: 15px; /* Adjust height */
   background-color: red;
   position: relative;
+  margin-bottom: 0;
 }
 
 .red-border::after {
@@ -233,12 +251,34 @@ body, ul {
     }
 
     /* intorduction Section Style */
+    main {
+      height: 100%;
+    }
+
     .hero {
       padding: 40px;
       width: 80%;
+      height: 100%;
       margin: auto;
       display: block;
+    }
+
+  .intro-container {
+    flex-direction: column;
+    margin: auto;
+    height: 100%;
   }
+
+  .intro-container .intro-section {
+    order: 1;
+  }
+
+  .img-container {
+    margin: auto;
+    text-align: center;
+    order: -1;
+  }
+}
   
   /* Loading Overlay */
   #loadingOverlay {
@@ -267,6 +307,7 @@ body, ul {
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
   }
   
 
