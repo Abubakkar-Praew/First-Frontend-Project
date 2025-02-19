@@ -6,127 +6,130 @@
   box-sizing: border-box;
 }
 
-body, ul {
-    background-color: #f9f9f9;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #044fc8;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    height: 35px;
-    padding: 0px 5%;
-    color: white;
-  }
-  
-  .navbarPages UL {
-    background-color: #044fc8;
-  }
-  
-  .logo a {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .logo a:hover {
-    color: yellow;
-  }
-  
-  .navbarPages ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  .navbarPages ul li {
-    margin: 0 15px;
-  }
-  
-  .navbarPages ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .navbarPages ul li a:hover {
-    border-bottom: 1PX solid yellow;
-    padding-bottom: 6px;
-    color: yellow;
-  }
-  
-  /* Language Dropdown */
-  .language {
-    position: relative;
-    cursor: pointer;
-    background-color: #007bff;
-  }
-  
-  .mainLang {
-    background: #044fc8;
-    color: white;
-    font-weight: bold;
-    padding: 5px 10px;
-    list-style: none;
-  }
-  
-  .langDropdown {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    background: #044fc8;
-    color: white;
-    list-style: none;
-    padding: 5px;
-    display: none;
-  }
-  
-  .language:hover .langDropdown {
-    display: block;
-  }
-  
-  .langDropdown li{
-    margin-top: 5px;
-    padding: 5px;
-  }
-  
-  .langDropdown li:hover {
-    color: yellow;
-    border-bottom: 1px solid yellow;
-  }
-  
-  /* Toggle Button */
-  .menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
+body,
+ul {
+  background-color: #f9f9f9;
+}
 
-  /* Introduction Style */
-  main {
-    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-    height: 97.7vh;
-  }
-  
-  .hero {
-    width: 80%;
-    height: 100vh;
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    margin: auto;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #044fc8;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  padding: 0px 5%;
+  color: white;
+}
+
+.navbarPages UL {
+  background-color: #044fc8;
+}
+
+.logo a {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: yellow;
+}
+
+.navbarPages ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbarPages ul li {
+  margin: 0 15px;
+}
+
+.navbarPages ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbarPages ul li a:hover {
+  border-bottom: 1px solid yellow;
+  padding-bottom: 6px;
+  color: yellow;
+}
+
+/* Language Dropdown */
+.language {
+  position: relative;
+  cursor: pointer;
+  background-color: #007bff;
+}
+
+.mainLang {
+  background: #044fc8;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  list-style: none;
+}
+
+.langDropdown {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background: #044fc8;
+  color: white;
+  list-style: none;
+  padding: 5px;
+  display: none;
+}
+
+.language:hover .langDropdown {
+  display: block;
+}
+
+.langDropdown li {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.langDropdown li:hover {
+  color: yellow;
+  border-bottom: 1px solid yellow;
+}
+
+/* Toggle Button */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Introduction Style */
+main {
+  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  height: 97.7vh;
+  margin-bottom: 0;
+}
+
+.hero {
+  width: 80%;
+  height: 100vh;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 0;
 }
 
 .intro-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0px;
 }
 
 .intro-container div h1 span {
@@ -211,7 +214,7 @@ body, ul {
     #044fc8
   );
   background-size: 300% 100%;
-  animation: moveGradient 10s linear infinite;
+  animation: moveGradient 20s linear infinite;
 }
 
 @keyframes moveGradient {
@@ -225,10 +228,34 @@ body, ul {
 
 /* Skills Section Styling */
 .skills {
+  margin-top: 0;
   padding: 50px 0;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
   text-align: center;
-  height: 100vh;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    yellow,
+    red,
+    #044fc8,
+    yellow,
+    red,
+    #044fc8
+  );
+  background-size: 300% 100%;
+  animation: moveGradient 20s linear infinite;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .skills-container .skill {
@@ -236,7 +263,7 @@ body, ul {
 }
 
 .skills-container:hover .skill {
-  filter: blur(20px);
+  filter: blur(10px);
   transform: scale(0.8);
   transition: 0.3s;
 }
@@ -446,11 +473,13 @@ body, ul {
     height: 100%;
     margin: auto;
     display: block;
+    margin-bottom: 0;
   }
 
   .intro-container {
     flex-direction: column;
     margin: auto;
+    margin-bottom: 0;
     height: 100%;
   }
 
@@ -466,5 +495,12 @@ body, ul {
 
   .img-container img {
     margin: auto;
+  }
+
+  /* skill section styles */
+  .skills {
+    padding: 25px 0;
+    text-align: center;
+    height: fit-content;
   }
 }
