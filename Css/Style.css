@@ -16,6 +16,7 @@ body, ul {
     align-items: center;
     background-color: #044fc8;
     position: fixed;
+    z-index: 1000;
     top: 0;
     width: 100%;
     height: 35px;
