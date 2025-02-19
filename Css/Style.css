@@ -121,18 +121,24 @@ body, ul {
     object-fit: cover;
     margin-bottom: 15px;
 }
+
 .hero h1 {
     font-size: 2.5rem;
     font-weight: bolder;
     text-align: center;
-    color: white;
+    color: #0a1459;
 }
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 25px;
     text-align: justify;
-    font-weight: bold;
+    font-weight: 500;
     color: white;
+}
+
+.hero .intro-container p span {
+  color: yellow;
+  font-weight: bold;
 }
 
 .img-container {
@@ -152,7 +158,43 @@ body, ul {
 }
 
 .social-icons a:hover {
-    color: #00aced;
+  text-shadow: 0px 0px 10px #16eef6, 
+               0px 0px 20px #16eef6, 
+               0px 0px 30px #16eef6;
+}
+
+.social-icons a i:hover {
+  scale: 115%;
+}
+
+/* Border Animation */
+.red-border {
+  width: 100%;
+  height: 15px; /* Adjust height */
+  background-color: red;
+  position: relative;
+}
+
+.red-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+      yellow, #16eef6, #044fc8, yellow, #16eef6, #044fc8);
+  background-size: 300% 100%;
+  animation: moveGradient 10s linear infinite;
+}
+
+@keyframes moveGradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
 }
 
   /* Responsive Design */
@@ -188,23 +230,12 @@ body, ul {
       padding: 0;
     }
 
-    .about-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-text {
-      padding-right: 0;
-    }
-  
-    .about-image {
-      text-align: center;
-      margin-top: 20px;
-    }
-  
-    .about-image img {
-      width: 200px;
-    }
+    /* intorduction Section Style */
+    .hero {
+      padding: 40px;
+      width: 80%;
+      margin: auto;
+      display: block;
   }
   
   /* Loading Overlay */
