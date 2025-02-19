@@ -107,7 +107,8 @@ body, ul {
   /* Introduction Style */
   main {
     /* background: rgba(0, 0, 0, 0.6); */
-    background-color: #63cfda;
+    /* background-color: #63cfda; */
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
   }
   
   .hero {
@@ -159,9 +160,9 @@ body, ul {
 }
 
 .social-icons a:hover {
-  text-shadow: 0px 0px 10px #16eef6, 
-               0px 0px 20px #16eef6, 
-               0px 0px 30px #16eef6;
+  text-shadow: 0px 0px 10px rgb(160, 160, 0), 
+               0px 0px 20px rgb(160, 160, 0), 
+               0px 0px 30px rgb(160, 160, 0);
 }
 
 .social-icons a i:hover {
