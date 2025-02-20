@@ -271,7 +271,7 @@ main {
 .skills-container .skill:hover {
   filter: blur(0px);
   transform: scale(1.1);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .skills h2 {

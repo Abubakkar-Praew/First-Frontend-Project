@@ -45,20 +45,21 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         loadingOverlay.style.display = "none";
         callback();
-      }, 2000);
+      }, 1000);
     }
   
     // Function to change page content based on language
     function changeLanguage(language, showLoader) {
       const translations = {
-        English: { services: "Services", portfolio: "Portfolio", projects: "Projects", contact: "Contact Me" },
-        Thai: { services: "บริการ", portfolio: "ผลงาน", projects: "โครงการ", contact: "ติดต่อฉัน" },
-        Urdu: { services: "خدمات", portfolio: "پورٹ فولیو", projects: "پروجیکٹس", contact: "مجھ سے رابطہ کریں" },
-        French: { services: "Services", portfolio: "Portefeuille", projects: "Projets", contact: "Contactez-moi" },
-        Spanish: { services: "Servicios", portfolio: "Portafolio", projects: "Proyectos", contact: "Contáctame" },
-        Russian: { services: "Услуги", portfolio: "Портфолио", projects: "Проекты", contact: "Свяжитесь со мной" },
-        Japanese: { services: "サービス", portfolio: "ポートフォリオ", projects: "プロジェクト", contact: "お問い合わせ" },
-        Korean: { services: "서비스", portfolio: "포트폴리오", projects: "프로젝트", contact: "문의하기" },
+        English: { Skills: "Skills", Services: "Services", Portfolio: "Portfolio", Projects: "Projects", Reviews: "Reviews", contact: "Contact Me" },
+        Thai: { Skills: "ทักษะ", Services: "บริการ", Portfolio: "ผลงาน", Projects: "โครงการ", Reviews: "รีวิว", contact: "ติดต่อฉัน" },
+        Urdu: { Skills: "تجربہ", Services: "خدمات", Portfolio: "پورٹ فولیو", Projects: "منصوبے", Reviews: "جائزے", contact: "رابطہ" },
+        French: { Skills: "Compétences", Services: "Services", Portfolio: "Portfolio", Projects: "Projets", Reviews: "Avis", contact: "Contactez-moi" },
+        Spanish: { Skills: "Habilidades", Services: "Servicios", Portfolio: "Portafolio", Projects: "Proyectos", Reviews: "Reseñas", contact: "Contáctame" },
+        Russian: { Skills: "Навыки", Services: "Услуги", Portfolio: "Портфолио", Projects: "Проекты", Reviews: "Отзывы", contact: "Свяжитесь со мной" },
+        Japanese: { Skills: "スキル", Services: "サービス", Portfolio: "ポートフォリオ", Projects: "プロジェクト", Reviews: "レビュー", contact: "お問い合わせ" },
+        Korean: { Skills: "기술", Services: "서비스", Portfolio: "포트폴리오", Projects: "프로젝트", Reviews: "리뷰", contact: "연락하기" },
+        Vietnamese: { Skills: "Kỹ năng", Services: "Dịch vụ", Portfolio: "Danh mục đầu tư", Projects: "Dự án", Reviews: "Đánh giá", contact: "Liên hệ với tôi" },
       };
   
       // Delay text update if showLoader is true
@@ -72,10 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to update text based on language selection
     function applyTranslations(translations) {
       const navbarLinks = document.querySelectorAll(".navbarPages ul li a");
-      navbarLinks[0].innerText = translations.services;
-      navbarLinks[1].innerText = translations.portfolio;
-      navbarLinks[2].innerText = translations.projects;
-      navbarLinks[3].innerText = translations.contact;
+      navbarLinks[0].innerText = translations.Skills;
+      navbarLinks[1].innerText = translations.Services;
+      navbarLinks[2].innerText = translations.Portfolio;
+      navbarLinks[3].innerText = translations.Projects;
+      navbarLinks[4].innerText = translations.Reviews;
+      navbarLinks[5].innerText = translations.contact;
     }
   });
   
