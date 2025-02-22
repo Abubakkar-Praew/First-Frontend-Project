@@ -82,3 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   
+  // Project Section scripts
+  function scrollSlider(direction) {
+    const slider = document.getElementById("slider");
+    slider.style.transition = "transform 0.5s ease-in-out";
+    slider.style.transform = `translateX(${direction * -320}px)`;
+
+    setTimeout(() => {
+        if (direction === 1) {
+            const firstCard = slider.firstElementChild;
+            slider.appendChild(firstCard);
+        } else {
+            const lastCard = slider.lastElementChild;
+            slider.insertBefore(lastCard, slider.firstElementChild);
+        }
+        slider.style.transition = "none";
+        slider.style.transform = "translateX(0)";
+    }, 500);
+}

@@ -24,12 +24,13 @@
           <a href="index.html">Abubakkar Praew</a>
         </div>
 
-        <div class="navbarPages">
+        <div class="navbarPages dropdownmenu">
           <ul>
             <li><a href="#Skills" onclick="maintenance ()">Skills</a></li>
             <li><a href="#" onclick="maintenance ()">Services</a></li>
             <li><a href="#" onclick="maintenance ()">Portfolio</a></li>
-            <li><a href="#" onclick="maintenance ()">Projects</a></li>
+            <li><a href="#projects" onclick="maintenance ()">Projects</a></li>
+            </li>
             <li><a href="#" onclick="maintenance ()">Reviews</a></li>
             <li><a href="#" onclick="maintenance ()">Contact Me</a></li>
           </ul>
@@ -93,29 +94,124 @@
         <div class="skills-container">
           <div class="skill">
             <h3>HTML</h3>
-            <p>HTML structures web content using elements like headings, paragraphs, and links. It forms the backbone of webpages, ensuring semantic organization.</p>
-            <button class="read-more"><a href="#">Learn More</a></button>
+            <p>
+              HTML structures web content using elements like headings,
+              paragraphs, and links. It forms the backbone of webpages, ensuring
+              semantic organization.
+            </p>
+            <button class="read-more"><a href="#">View Projects</a></button>
           </div>
           <div class="skill">
             <h3>CSS</h3>
-            <p>CSS styles web content, enhancing its visual presentation. It allows for customizing colors, fonts, layouts, and animations to create visually appealing websites.</p>
-            <button class="read-more"><a href="#">Learn More</a></button>
+            <p>
+              CSS styles web content, enhancing its visual presentation. It
+              allows for customizing colors, fonts, layouts, and animations to
+              create visually appealing websites.
+            </p>
+            <button class="read-more"><a href="#">View Projects</a></button>
           </div>
           <div class="skill">
             <h3>Bootstrap</h3>
-            <p>Bootstrap is a popular front-end framework with pre-designed components, grid systems, and responsive utilities, enabling faster, consistent, and mobile-first web development.</p>
-            <button class="read-more"><a href="#">Learn More</a></button>
+            <p>
+              Bootstrap is a popular front-end framework with pre-designed
+              components, grid systems, and responsive utilities, enabling
+              faster, consistent, and mobile-first web development.
+            </p>
+            <button class="read-more"><a href="#">View Projects</a></button>
           </div>
           <div class="skill">
             <h3>JavaScript</h3>
-            <p>JavaScript adds interactivity to websites, enabling dynamic content, animations, event handling, and API interactions, making web pages more engaging and functional.</p>
-            <button class="read-more"><a href="#">Learn More</a></button>
+            <p>
+              JavaScript adds interactivity to websites, enabling dynamic
+              content, animations, event handling, and API interactions, making
+              web pages more engaging and functional.
+            </p>
+            <button class="read-more"><a href="#">View Projects</a></button>
           </div>
           <div class="skill">
             <h3>React js</h3>
-            <p>React.js, a JavaScript library, builds interactive user interfaces using components, virtual DOM, and state management, ensuring efficient, scalable front-end web applications.</p>
-            <button class="read-more"><a href="#">Learn More</a></button>
+            <p>
+              React.js, a JavaScript library, builds interactive user interfaces
+              using components, virtual DOM, and state management, ensuring
+              efficient, scalable front-end web applications.
+            </p>
+            <button class="read-more"><a href="#">View Projects</a></button>
           </div>
+        </div>
+      </div>
+
+      <!-- Projects with Slider Codding -->
+      <div id="projects">
+        <h2>My Projects</h2>
+        <div class="slider-container">
+          <button class="navigation prev" onclick="scrollSlider(-1)">
+            <i class="fa-regular fa-circle-left"></i>
+          </button>
+          <div class="slider" id="slider">
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 1" />
+              <h3>Project 1</h3>
+              <p>This is my First project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 2" />
+              <h3>Project 2</h3>
+              <p>This is my Second project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 3" />
+              <h3>Project 3</h3>
+              <p>This is my third project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 4" />
+              <h3>Project 4</h3>
+              <p>This is my Fourth project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 5" />
+              <h3>Project 5</h3>
+              <p>This is my Fifth project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 6" />
+              <h3>Project 6</h3>
+              <p>This is my Sixth project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 7" />
+              <h3>Project 7</h3>
+              <p>This is my Seventh project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 8" />
+              <h3>Project 8</h3>
+              <p>This is my Eight project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 9" />
+              <h3>Project 9</h3>
+              <p>This is my Ninth project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 10" />
+              <h3>Project 10</h3>
+              <p>This is my Tenth project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+          </div>
+          <button class="navigation next" onclick="scrollSlider(1)">
+            <i class="fa-regular fa-circle-right"></i>
+          </button>
         </div>
       </div>
 
