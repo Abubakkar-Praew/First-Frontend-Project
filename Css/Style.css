@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* General Styles */
 * {
@@ -146,7 +146,7 @@ main {
 }
 
 .intro-container div h1 span {
-  color: #FFD700;
+  color: #ffd700;
   text-decoration: underline;
   font-weight: bold;
   text-transform: uppercase;
@@ -401,7 +401,6 @@ main {
   opacity: 0.8;
 }
 
-
 /* Projects with Slider Codding */
 #projects {
   height: 100vh;
@@ -426,107 +425,8 @@ main {
   transition: transform 0.5s ease-in-out;
 }
 
-.card {
-  height: 250px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
+/* Card Description with Fixed Height */ /* Card Description with Fixed Height */ /* Card Description with Fixed Height */
 
-.card img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.card h3 {
-  margin: 10px 0;
-}
-.card p {
-  font-size: 14px;
-  color: #555;
-}
-.card button {
-  padding: 10px 15px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.card button:hover {
-  background: #0056b3;
-}
-.navigation {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: yellow;
-  color: white;
-  border: none;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: 0.3s;
-}
-.prev {
-  left: 15px;
-}
-
-.fa-regular {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bolder;
-}
-
-.fa-regular:hover {
-  color: black;
-}
-
-
-.prev:hover {
-  background: yellow;
-}
-.prev:hover .fa-regular {
-  color: black;
-}
-
-.next {
-  right: 0;
-}
-
-.next:hover {
-  background: yellow;
-}
-
-/* Projects with Slider Coding */
-#projects {
-  padding: 50px 0;
-  background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-  text-align: center;
-}
-
-/* Slider Container */
-.slider-container {
-  width: 90%;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Slider - Fixed layout issues */
-.slider {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease-in-out;
-}
-
-/* Card Styling - Fixed height issue */
 .card {
   flex: 0 0 23%;
   background: #dddada;
@@ -545,7 +445,6 @@ main {
   transition: 0.2s;
 }
 
-/* Ensure images don’t affect button alignment */
 .card img {
   width: 100%;
   border-radius: 10px;
@@ -556,23 +455,12 @@ main {
   margin: 10px 0;
 }
 
-/* Card Description with Fixed Height */
-.card-body {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Description - Consistent Height */
 .card p {
   font-size: 14px;
   color: #555;
-  min-height: 40px;  /* Ensures uniform text space */
+  min-height: 40px; /* Ensures uniform text space */
   margin-bottom: 10px;
 }
-
-/* Button - Fixed alignment issue */
 .card button {
   padding: 10px 15px;
   background: #007bff;
@@ -580,29 +468,41 @@ main {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: auto;  /* Ensures button stays at the bottom */
+  margin-top: auto; /* Ensures button stays at the bottom */
 }
-
-/* Navigation Buttons */
+.card button:hover {
+  background: #0056b3;
+}
 .navigation {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: yellow;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
   z-index: 10;
 }
-
 .prev {
-  left: 0px;
+  left: 15px;
 }
+
+.fa-regular {
+  color: black;
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+.fa-regular:hover {
+  color: red;
+}
+
 .next {
   right: 0;
 }
-
 
 /* Loading Overlay */
 #loadingOverlay {
@@ -710,5 +610,10 @@ main {
     padding: 25px 0;
     text-align: center;
     height: fit-content;
+  }
+
+  /* Responsive Projects */
+  .card {
+    flex: 0 0 40%;
   }
 }
