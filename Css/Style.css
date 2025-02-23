@@ -403,7 +403,7 @@ main {
 
 /* Projects with Slider Codding */
 #projects {
-  height: 100vh;
+  height: 100%;
   padding: 50px 0;
   background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   text-align: center;
@@ -539,8 +539,17 @@ main {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+  }
+
   .menu-toggle {
     display: block;
+  }
+
+  .logo a {
+    font-size: 18px;
   }
 
   .navbarPages {
@@ -584,6 +593,15 @@ main {
     margin-bottom: 0;
   }
 
+  .hero h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  .hero p {
+    font-size: 1rem;
+    font-weight: 400;
+  }  
+
   .intro-container {
     flex-direction: column;
     margin: auto;
@@ -612,8 +630,14 @@ main {
     height: fit-content;
   }
 
+  .skill {
+    width: 250px;
+    height: 350px;
+  }
+
   /* Responsive Projects */
   .card {
-    flex: 0 0 40%;
+    flex: 0 0 80%; /* Takes full width in small screens */
+  max-width: 80%;
   }
 }
