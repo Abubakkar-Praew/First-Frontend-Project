@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Route-friendly CSS variables */
+:root {
+  --bg-color: #222831;
+  --text-color: #EEEEEE;
+  --nav-bg-color: #1B1E23;
+  --nav-link-color: #FFD700;
+  --nav-link-hover-color: #00ADB5;
+  --nav-link-active-color: #F8B400;
+  --btn-primary-bg: #00ADB5;
+  --btn-primary-hover-bg: #008C9E;
+  --btn-secondary-bg: #393E46;
+  --btn-secondary-hover-bg: #4E545F;
+  --link-color: #FFD700;
+  --link-hover-color: #F8B400;
+  --transparent-bg: rgba(27, 30, 35, 0.6);
+}
+
+
 /* General Styles */
 * {
   font-family: "Poppins", sans-serif;
@@ -35,7 +53,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #044fc8;
+  background-color: rgba(34, 40, 49, 0.8);
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -43,10 +61,6 @@ h2 {
   height: 35px;
   padding: 0px 5%;
   color: white;
-}
-
-.navbarPages UL {
-  background-color: #044fc8;
 }
 
 .logo a {
@@ -85,11 +99,9 @@ h2 {
 .language {
   position: relative;
   cursor: pointer;
-  background-color: #007bff;
 }
 
 .mainLang {
-  background: #044fc8;
   color: white;
   font-weight: bold;
   padding: 5px 10px;
@@ -98,9 +110,9 @@ h2 {
 
 .langDropdown {
   position: absolute;
-  top: 25px;
+  top: 35px;
   left: 0;
-  background: #044fc8;
+  background: rgba(34, 40, 49, 0.8);
   color: white;
   list-style: none;
   padding: 5px;

@@ -100,3 +100,11 @@ document.addEventListener("DOMContentLoaded", function () {
         slider.style.transform = "translateX(0)";
     }, 500);
 }
+
+<script>
+    document.querySelectorAll('.service-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            alert('More details coming soon!');
+        });
+    });
+</script>
