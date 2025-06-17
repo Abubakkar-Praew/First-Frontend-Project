@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRAEW DIGITAL AGENCY | HOME</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Css/Style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+
+    <header>
+      <nav class="navbar">
+        <div class="menu-toggle">
+          <i class="fa-solid fa-toggle-off"></i>
+        </div>
+
+        <div class="logo">
+          <a href="index.html">PRAEW DIGITAL AGENCY</a>
+        </div>
+
+        <div class="navbarPages dropdownmenu">
+          <ul>
+            <li><a href="#Skills" onclick="maintenance ()">Skills</a></li>
+            <li><a href="#services" onclick="maintenance ()">Services</a></li>
+            <li><a href="#" onclick="maintenance ()">Portfolio</a></li>
+            <li><a href="#projects" onclick="maintenance ()">Projects</a></li>
+            </li>
+            <li><a href="#" onclick="maintenance ()">Reviews</a></li>
+            <li><a href="#" onclick="maintenance ()">Contact Me</a></li>
+          </ul>
+        </div>
+        <!-- Second Language Bar -->
+        <div class="language">
+          <ul>
+            <li class="mainLang">English</li>
+            <ul class="langDropdown">
+              <li>Vietnamese</li>
+              <li>English</li>
+              <li>Thai</li>
+              <li>Urdu</li>
+            </ul>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Introduction Section  -->
+      <div class="hero">
+        <div class="intro-container">
+          <div class="intro-section">
+            <h1>I'm <span>Abubakkar Praew</span></h1>
+            <p>
+              Passionate <span>Front-End Developer</span> with expertise in
+              <span>HTML, CSS, Bootstrap, JavaScript,</span> and
+              <span>React.js.</span> I specialize in building modern,
+              interactive, and <span>responsive web applications.</span> My goal
+              is to craft clean, <span>user-friendly,</span> and
+              <span>high-performance websites</span> that enhance user
+              experience. With a deep understanding of
+              <span>front-end technologies,</span> I love turning creative ideas
+              into real-world web solutions. Always eager to learn and stay
+              updated with the latest web trends!
+            </p>
+            <div class="social-icons">
+              <a href="https://web.facebook.com/MAbubakkar999/" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/mabubakkar999/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/abubakkar-praew-763953319/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+          <div class="img-container">
+            <img src="images/Abubakkar Logo.svg" alt="Profile Image" />
+          </div>
+        </div>
+      </div>
+        <!-- General Loading -->
+        <div id="loadingOverlay">
+          <div class="loader"></div>
+        </div>
+
+      <!-- Skills Section -->
+      <div class="skills" id="Skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <h3>HTML</h3>
+            <p>
+              HTML structures web content using elements like headings,
+              paragraphs, and links. It forms the backbone of webpages, ensuring
+              semantic organization.
+            </p>
+            <button class="read-more"><a href="#">View Projects</a></button>
+          </div>
+          <div class="skill">
+            <h3>CSS</h3>
+            <p>
+              CSS styles web content, enhancing its visual presentation. It
+              allows for customizing colors, fonts, layouts, and animations to
+              create visually appealing websites.
+            </p>
+            <button class="read-more"><a href="#">View Projects</a></button>
+          </div>
+          <div class="skill">
+            <h3>Bootstrap</h3>
+            <p>
+              Bootstrap is a popular front-end framework with pre-designed
+              components, grid systems, and responsive utilities, enabling
+              faster, consistent, and mobile-first web development.
+            </p>
+            <button class="read-more"><a href="#">View Projects</a></button>
+          </div>
+          <div class="skill">
+            <h3>JavaScript</h3>
+            <p>
+              JavaScript adds interactivity to websites, enabling dynamic
+              content, animations, event handling, and API interactions, making
+              web pages more engaging and functional.
+            </p>
+            <button class="read-more"><a href="#">View Projects</a></button>
+          </div>
+          <div class="skill">
+            <h3>React js</h3>
+            <p>
+              React.js, a JavaScript library, builds interactive user interfaces
+              using components, virtual DOM, and state management, ensuring
+              efficient, scalable front-end web applications.
+            </p>
+            <button class="read-more"><a href="#">View Projects</a></button>
+          </div>
+        </div>
+      </div>
+      <!-- General Loading -->
+      <div id="loadingOverlay">
+        <div class="loader"></div>
+      </div>
+
+
+      <!-------------------------------------- Checking Coding -------------------------------------->
+      <!-- <section id="services" class="py-5" style="background-color: black; color: white;">
+        <div class="container text-center">
+            <h2 style="color: yellow; font-weight: bold; margin-bottom: 20px;">My Services</h2>
+            <div class="row" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                
+                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
+                    <h4 style="color: yellow;">Front-End Web Development</h4>
+                    <p>Creating responsive, interactive, and visually appealing websites.</p>
+                    <button class="service-btn" style="background-color: yellow; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">View Details</button>
+                </div>
+                
+                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
+                    <h4 style="color: blue;">Website Redesign & Optimization</h4>
+                    <p>Enhancing speed, design, and performance for better user experience.</p>
+                    <button class="service-btn" style="background-color: blue; padding: 10px; border: none; border-radius: 5px; cursor: pointer; color: white;">View Details</button>
+                </div>
+                
+                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
+                    <h4 style="color: red;">Landing Page Development</h4>
+                    <p>Building high-converting landing pages for businesses and products.</p>
+                    <button class="service-btn" style="background-color: red; padding: 10px; border: none; border-radius: 5px; cursor: pointer; color: white;">View Details</button>
+                </div>
+                
+                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
+                    <h4 style="color: cyan;">Custom React.js Development</h4>
+                    <p>Creating dynamic and interactive web applications using React.js.</p>
+                    <button class="service-btn" style="background-color: cyan; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">View Details</button>
+                </div>
+                
+                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
+                    <h4 style="color: green;">JavaScript Enhancements</h4>
+                    <p>Adding animations, interactivity, and dynamic content loading.</p>
+                    <button class="service-btn" style="background-color: green; padding: 10px; border: none; border-radius: 5px; cursor: pointer; color: white;">View Details</button>
+                </div>
+                
+                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
+                    <h4 style="color: purple;">E-commerce Development</h4>
+                    <p>Building online stores with secure payment and smooth user experience.</p>
+                    <button class="service-btn" style="background-color: purple; padding: 10px; border: none; border-radius: 5px; cursor: pointer; color: white;">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+          <!-------------------------------------- Checking Coding -------------------------------------->
+    
+
+      <!-- Projects with Slider Codding -->
+      <div id="projects">
+        <h2>My Projects</h2>
+        <div class="slider-container">
+          <button class="navigation prev" onclick="scrollSlider(-1)">
+            <i class="fa-regular fa-circle-left"></i>
+          </button>
+          <div class="slider" id="slider">
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 1" />
+              <h3>Project 1</h3>
+              <p>This is my First project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 2" />
+              <h3>Project 2</h3>
+              <p>This is my Second project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 3" />
+              <h3>Project 3</h3>
+              <p>This is my third project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 4" />
+              <h3>Project 4</h3>
+              <p>This is my Fourth project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 5" />
+              <h3>Project 5</h3>
+              <p>This is my Fifth project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 6" />
+              <h3>Project 6</h3>
+              <p>This is my Sixth project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 7" />
+              <h3>Project 7</h3>
+              <p>This is my Seventh project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 8" />
+              <h3>Project 8</h3>
+              <p>This is my Eight project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 9" />
+              <h3>Project 9</h3>
+              <p>This is my Ninth project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+            <div class="card">
+              <img src="images/Comming Soon.svg" alt="Card 10" />
+              <h3>Project 10</h3>
+              <p>This is my Tenth project and we will Upload it soon.</p>
+              <button>Open Project</button>
+            </div>
+          </div>
+          <button class="navigation next" onclick="scrollSlider(1)">
+            <i class="fa-regular fa-circle-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- General Loading -->
+      <div id="loadingOverlay">
+        <div class="loader"></div>
+      </div>
+    </main>
+
+    <!-- Animated Border -->
+    <div class="red-border"></div>
+
+    <script src="Script/Script.js"></script>
+  </body>
+</html>

@@ -1,286 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PRAEW DIGITAL AGENCY | HOME</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="Css/Style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Launch Countdown</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
-  <body>
-    <!-- Navigation Bar -->
 
-    <header>
-      <nav class="navbar">
-        <div class="menu-toggle">
-          <i class="fa-solid fa-toggle-off"></i>
-        </div>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(-45deg, #ee7752, #b4e73c, #23a6d5, #23d5ab, #ff6ec4, #7873f5, #4ade80, #fdba74);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+    }
 
-        <div class="logo">
-          <a href="index.html">PRAEW DIGITAL AGENCY</a>
-        </div>
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
 
-        <div class="navbarPages dropdownmenu">
-          <ul>
-            <li><a href="#Skills" onclick="maintenance ()">Skills</a></li>
-            <li><a href="#services" onclick="maintenance ()">Services</a></li>
-            <li><a href="#" onclick="maintenance ()">Portfolio</a></li>
-            <li><a href="#projects" onclick="maintenance ()">Projects</a></li>
-            </li>
-            <li><a href="#" onclick="maintenance ()">Reviews</a></li>
-            <li><a href="#" onclick="maintenance ()">Contact Me</a></li>
-          </ul>
-        </div>
-        <!-- Second Language Bar -->
-        <div class="language">
-          <ul>
-            <li class="mainLang">English</li>
-            <ul class="langDropdown">
-              <li>Vietnamese</li>
-              <li>English</li>
-              <li>Thai</li>
-              <li>Urdu</li>
-            </ul>
-          </ul>
-        </div>
-      </nav>
-    </header>
+      50% {
+        background-position: 100% 50%;
+      }
 
-    <main>
-      <!-- Introduction Section  -->
-      <div class="hero">
-        <div class="intro-container">
-          <div class="intro-section">
-            <h1>I'm <span>Abubakkar Praew</span></h1>
-            <p>
-              Passionate <span>Front-End Developer</span> with expertise in
-              <span>HTML, CSS, Bootstrap, JavaScript,</span> and
-              <span>React.js.</span> I specialize in building modern,
-              interactive, and <span>responsive web applications.</span> My goal
-              is to craft clean, <span>user-friendly,</span> and
-              <span>high-performance websites</span> that enhance user
-              experience. With a deep understanding of
-              <span>front-end technologies,</span> I love turning creative ideas
-              into real-world web solutions. Always eager to learn and stay
-              updated with the latest web trends!
-            </p>
-            <div class="social-icons">
-              <a href="https://web.facebook.com/MAbubakkar999/" target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a href="https://www.instagram.com/mabubakkar999/" target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/abubakkar-praew-763953319/"
-                target="_blank"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-            </div>
-          </div>
-          <div class="img-container">
-            <img src="images/Abubakkar Logo.svg" alt="Profile Image" />
-          </div>
-        </div>
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 1rem;
+      box-sizing: border-box;
+      /* background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #fdba74);
+            animation: animateBackground 2s ease infinite; */
+    }
+
+    @keyframes animateBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .popup {
+      position: relative;
+      background: #222;
+      padding: 2rem 2.5rem;
+      border-radius: 1.25rem;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow:
+        0 0 20px #4a00e0,
+        0 0 40px #8e2de2,
+        0 0 60px #00c6ff,
+        0 0 80px #f7971e;
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 0.75rem;
+      color: #fff;
+    }
+
+    h2 .companyName {
+      color: darkorange;
+    }
+
+    p {
+      margin: 0.75rem 0 1.25rem;
+      font-size: 1rem;
+      color: #eee;
+      line-height: 1.4;
+    }
+
+    .construction-text {
+      font-weight: 700;
+      color: #FFD700;
+      font-size: 1.375rem;
+      margin: 1.25rem 0;
+      letter-spacing: 0.05em;
+      transition: opacity 0.5s ease;
+    }
+
+    .countdown {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .countdown span {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0.5rem;
+      margin: 0 0.4rem;
+      min-width: 3rem;
+      display: inline-block;
+      padding: 0.5rem 0.8rem;
+    }
+
+    @media (max-width: 480px) {
+      .popup {
+        padding: 1.5rem 1.75rem;
+        max-width: 100%;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      .construction-text {
+        font-size: 1.125rem;
+        margin: 1rem 0;
+      }
+
+      .countdown {
+        font-size: 1.8rem;
+        margin: 1rem 0 0.75rem;
+        letter-spacing: 0.1em;
+      }
+
+      .countdown span {
+        padding: 0.3rem 0.75rem;
+        min-width: 2.5rem;
+        margin: 0 0.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">
+    <div class="popup">
+      <h2>👋 Welcome to <br> <span class="companyName">Praew Digital Agency</span>!</h2>
+      <p>We are currently working hard on building something amazing for you.</p>
+      <div class="construction-text" id="constructionText">🚧 Under Construction</div>
+      <div class="countdown" id="countdown">
+        <span id="days">00</span> :
+        <span id="hours">00</span> :
+        <span id="minutes">00</span> :
+        <span id="seconds">00</span>
       </div>
-        <!-- General Loading -->
-        <div id="loadingOverlay">
-          <div class="loader"></div>
-        </div>
+      <p>Please check back again very soon!</p>
+    </div>
+  </div>
 
-      <!-- Skills Section -->
-      <div class="skills" id="Skills">
-        <h2>My Skills</h2>
-        <div class="skills-container">
-          <div class="skill">
-            <h3>HTML</h3>
-            <p>
-              HTML structures web content using elements like headings,
-              paragraphs, and links. It forms the backbone of webpages, ensuring
-              semantic organization.
-            </p>
-            <button class="read-more"><a href="#">View Projects</a></button>
-          </div>
-          <div class="skill">
-            <h3>CSS</h3>
-            <p>
-              CSS styles web content, enhancing its visual presentation. It
-              allows for customizing colors, fonts, layouts, and animations to
-              create visually appealing websites.
-            </p>
-            <button class="read-more"><a href="#">View Projects</a></button>
-          </div>
-          <div class="skill">
-            <h3>Bootstrap</h3>
-            <p>
-              Bootstrap is a popular front-end framework with pre-designed
-              components, grid systems, and responsive utilities, enabling
-              faster, consistent, and mobile-first web development.
-            </p>
-            <button class="read-more"><a href="#">View Projects</a></button>
-          </div>
-          <div class="skill">
-            <h3>JavaScript</h3>
-            <p>
-              JavaScript adds interactivity to websites, enabling dynamic
-              content, animations, event handling, and API interactions, making
-              web pages more engaging and functional.
-            </p>
-            <button class="read-more"><a href="#">View Projects</a></button>
-          </div>
-          <div class="skill">
-            <h3>React js</h3>
-            <p>
-              React.js, a JavaScript library, builds interactive user interfaces
-              using components, virtual DOM, and state management, ensuring
-              efficient, scalable front-end web applications.
-            </p>
-            <button class="read-more"><a href="#">View Projects</a></button>
-          </div>
-        </div>
-      </div>
-      <!-- General Loading -->
-      <div id="loadingOverlay">
-        <div class="loader"></div>
-      </div>
+  <script>
+    const constructionText = document.getElementById('constructionText');
+    let visible = true;
+    setInterval(() => {
+      visible = !visible;
+      constructionText.style.opacity = visible ? '1' : '0.3';
+    }, 800);
 
+    const countdown = {
+      days: document.getElementById('days'),
+      hours: document.getElementById('hours'),
+      minutes: document.getElementById('minutes'),
+      seconds: document.getElementById('seconds')
+    };
 
-      <!-------------------------------------- Checking Coding -------------------------------------->
-      <!-- <section id="services" class="py-5" style="background-color: black; color: white;">
-        <div class="container text-center">
-            <h2 style="color: yellow; font-weight: bold; margin-bottom: 20px;">My Services</h2>
-            <div class="row" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-                
-                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
-                    <h4 style="color: yellow;">Front-End Web Development</h4>
-                    <p>Creating responsive, interactive, and visually appealing websites.</p>
-                    <button class="service-btn" style="background-color: yellow; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">View Details</button>
-                </div>
-                
-                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
-                    <h4 style="color: blue;">Website Redesign & Optimization</h4>
-                    <p>Enhancing speed, design, and performance for better user experience.</p>
-                    <button class="service-btn" style="background-color: blue; padding: 10px; border: none; border-radius: 5px; cursor: pointer; color: white;">View Details</button>
-                </div>
-                
-                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
-                    <h4 style="color: red;">Landing Page Development</h4>
-                    <p>Building high-converting landing pages for businesses and products.</p>
-                    <button class="service-btn" style="background-color: red; padding: 10px; border: none; border-radius: 5px; cursor: pointer; color: white;">View Details</button>
-                </div>
-                
-                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
-                    <h4 style="color: cyan;">Custom React.js Development</h4>
-                    <p>Creating dynamic and interactive web applications using React.js.</p>
-                    <button class="service-btn" style="background-color: cyan; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">View Details</button>
-                </div>
-                
-                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
-                    <h4 style="color: green;">JavaScript Enhancements</h4>
-                    <p>Adding animations, interactivity, and dynamic content loading.</p>
-                    <button class="service-btn" style="background-color: green; padding: 10px; border: none; border-radius: 5px; cursor: pointer; color: white;">View Details</button>
-                </div>
-                
-                <div class="service-card" style="background-color: #222; padding: 20px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">
-                    <h4 style="color: purple;">E-commerce Development</h4>
-                    <p>Building online stores with secure payment and smooth user experience.</p>
-                    <button class="service-btn" style="background-color: purple; padding: 10px; border: none; border-radius: 5px; cursor: pointer; color: white;">View Details</button>
-                </div>
-            </div>
-        </div>
-    </section> -->
-          <!-------------------------------------- Checking Coding -------------------------------------->
-    
+    const launchDate = new Date('august 14, 2025 12:00:00').getTime();
 
-      <!-- Projects with Slider Codding -->
-      <div id="projects">
-        <h2>My Projects</h2>
-        <div class="slider-container">
-          <button class="navigation prev" onclick="scrollSlider(-1)">
-            <i class="fa-regular fa-circle-left"></i>
-          </button>
-          <div class="slider" id="slider">
-            <div class="card">
-              <img src="images/Comming Soon.svg" alt="Card 1" />
-              <h3>Project 1</h3>
-              <p>This is my First project and we will Upload it soon.</p>
-              <button>Open Project</button>
-            </div>
-            <div class="card">
-              <img src="images/Comming Soon.svg" alt="Card 2" />
-              <h3>Project 2</h3>
-              <p>This is my Second project and we will Upload it soon.</p>
-              <button>Open Project</button>
-            </div>
-            <div class="card">
-              <img src="images/Comming Soon.svg" alt="Card 3" />
-              <h3>Project 3</h3>
-              <p>This is my third project and we will Upload it soon.</p>
-              <button>Open Project</button>
-            </div>
-            <div class="card">
-              <img src="images/Comming Soon.svg" alt="Card 4" />
-              <h3>Project 4</h3>
-              <p>This is my Fourth project and we will Upload it soon.</p>
-              <button>Open Project</button>
-            </div>
-            <div class="card">
-              <img src="images/Comming Soon.svg" alt="Card 5" />
-              <h3>Project 5</h3>
-              <p>This is my Fifth project and we will Upload it soon.</p>
-              <button>Open Project</button>
-            </div>
-            <div class="card">
-              <img src="images/Comming Soon.svg" alt="Card 6" />
-              <h3>Project 6</h3>
-              <p>This is my Sixth project and we will Upload it soon.</p>
-              <button>Open Project</button>
-            </div>
-            <div class="card">
-              <img src="images/Comming Soon.svg" alt="Card 7" />
-              <h3>Project 7</h3>
-              <p>This is my Seventh project and we will Upload it soon.</p>
-              <button>Open Project</button>
-            </div>
-            <div class="card">
-              <img src="images/Comming Soon.svg" alt="Card 8" />
-              <h3>Project 8</h3>
-              <p>This is my Eight project and we will Upload it soon.</p>
-              <button>Open Project</button>
-            </div>
-            <div class="card">
-              <img src="images/Comming Soon.svg" alt="Card 9" />
-              <h3>Project 9</h3>
-              <p>This is my Ninth project and we will Upload it soon.</p>
-              <button>Open Project</button>
-            </div>
-            <div class="card">
-              <img src="images/Comming Soon.svg" alt="Card 10" />
-              <h3>Project 10</h3>
-              <p>This is my Tenth project and we will Upload it soon.</p>
-              <button>Open Project</button>
-            </div>
-          </div>
-          <button class="navigation next" onclick="scrollSlider(1)">
-            <i class="fa-regular fa-circle-right"></i>
-          </button>
-        </div>
-      </div>
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = launchDate - now;
 
-      <!-- General Loading -->
-      <div id="loadingOverlay">
-        <div class="loader"></div>
-      </div>
-    </main>
+      if (diff <= 0) {
+        countdown.days.textContent = '00';
+        countdown.hours.textContent = '00';
+        countdown.minutes.textContent = '00';
+        countdown.seconds.textContent = '00';
+        return;
+      }
 
-    <!-- Animated Border -->
-    <div class="red-border"></div>
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    <script src="Script/Script.js"></script>
-  </body>
+      countdown.days.textContent = String(days).padStart(2, '0');
+      countdown.hours.textContent = String(hours).padStart(2, '0');
+      countdown.minutes.textContent = String(minutes).padStart(2, '0');
+      countdown.seconds.textContent = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+
 </html>
