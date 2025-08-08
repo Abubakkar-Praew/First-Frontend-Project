@@ -2,270 +2,218 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnnazCosmetic - Beauty, Fashion & Health Products</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Launch Countdown</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(-45deg, #ee7752, #b4e73c, #23a6d5, #23d5ab, #ff6ec4, #7873f5, #4ade80, #fdba74);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 1rem;
+            box-sizing: border-box;
+            /* background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #fdba74);
+            animation: animateBackground 2s ease infinite; */
+        }
+
+        @keyframes animateBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .popup {
+            position: relative;
+            background: #222;
+            padding: 2rem 2.5rem;
+            border-radius: 1.25rem;
+            max-width: 440px;
+            width: 100%;
+            text-align: center;
+            box-shadow:
+                0 0 20px #4a00e0,
+                0 0 40px #8e2de2,
+                0 0 60px #00c6ff,
+                0 0 80px #f7971e;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 0 0.75rem;
+            color: #fff;
+        }
+
+        p {
+            margin: 0.75rem 0 1.25rem;
+            font-size: 1rem;
+            color: #eee;
+            line-height: 1.4;
+        }
+
+        .construction-text {
+            font-weight: 700;
+            color: #FFD700;
+            font-size: 1.375rem;
+            margin: 1.25rem 0;
+            letter-spacing: 0.05em;
+            transition: opacity 0.5s ease;
+        }
+
+        .countdown {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .countdown span {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 0.5rem;
+            margin: 0 0.4rem;
+            min-width: 3rem;
+            display: inline-block;
+            padding: 0.5rem 0.8rem;
+        }
+
+        @media (max-width: 480px) {
+            .popup {
+                padding: 1.5rem 1.75rem;
+                max-width: 100%;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .construction-text {
+                font-size: 1.125rem;
+                margin: 1rem 0;
+            }
+
+            .countdown {
+                font-size: 1.8rem;
+                margin: 1rem 0 0.75rem;
+                letter-spacing: 0.1em;
+            }
+
+            .countdown span {
+                padding: 0.3rem 0.75rem;
+                min-width: 2.5rem;
+                margin: 0 0.25rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Top Announcement Bar -->
-    <div class="announcement-bar">
-        <p>Free shipping on orders over $50 | Use code WELCOME10 for 10% off</p>
+    <div class="overlay">
+        <div class="popup">
+            <h2>👋 Welcome to Our Store!</h2>
+            <p>We are currently working hard on building something amazing for you.</p>
+            <div class="construction-text" id="constructionText">🚧 Under Construction</div>
+            <div class="countdown" id="countdown">
+                <span id="days">00</span> :
+                <span id="hours">00</span> :
+                <span id="minutes">00</span> :
+                <span id="seconds">00</span>
+            </div>
+            <p>Please check back again very soon!</p>
+        </div>
     </div>
 
-    <!-- Main Header -->
-    <header class="main-header">
-        <div class="header-container">
+    <script>
+        const constructionText = document.getElementById('constructionText');
+        let visible = true;
+        setInterval(() => {
+            visible = !visible;
+            constructionText.style.opacity = visible ? '1' : '0.3';
+        }, 800);
 
-            <!-- Mobile Toggle -->
-            <div class="mobile-search-toggle">
-                <i id="toggleIcon" class="fa-solid fa-toggle-off"></i>
-            </div>
-            <!-- Logo -->
-            <div class="logo">
-                <a href="/">
-                    <img src="assets/images/Annaz Cosmetic Store.png" alt="AnnazCosmetic" width="125">
-                </a>
-            </div>
+        const countdown = {
+            days: document.getElementById('days'),
+            hours: document.getElementById('hours'),
+            minutes: document.getElementById('minutes'),
+            seconds: document.getElementById('seconds')
+        };
 
-            <!-- Main Navigation -->
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="/">Home</a></li>
+        const launchDate = new Date('august 14, 2025 12:00:00').getTime();
 
-                    <!-- Pakistani Product Menu -->
-                    <li class="dropdown">
-                        <a href="/brands">Pakistani <i class="fas fa-chevron-down"></i></a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-column">
-                                <h3>Top Brands</h3>
-                                <ul>
-                                    <li><a href="/skincare">The ordinary</a></li>
-                                    <li><a href="/makeup">Rivag UK</a></li>
-                                    <li><a href="/haircare">Hemani</a></li>
-                                    <li><a href="/fragrances">Glam girl</a></li>
-                                    <li><a href="/fragrances">Saeed ghani</a></li>
-                                    <li><a href="/fragrances">Vince</a></li>
-                                    <li><a href="/fragrances">Conatural</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h3>Organic & herbal products</h3>
-                                <ul>
-                                    <li><a href="/womens-clothing">Rose water spray</a></li>
-                                    <li><a href="/mens-clothing">Aloe Vera gel</a></li>
-                                    <li><a href="/accessories">Mulltani mitti masks</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h3>Korean skin care</h3>
-                                <ul>
-                                    <li><a href="/vitamins">Sheet masks</a></li>
-                                    <li><a href="/supplements">Snail mucin creams/serums</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h3>Hairs</h3>
-                                <ul>
-                                    <li><a href="/beard-care">Hair serum</a></li>
-                                    <li><a href="/shaving">Onion oil</a></li>
-                                    <li><a href="/mens-skincare">Hair masks</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = launchDate - now;
 
-                    <!-- Shop Dropdown -->
-                    <li class="dropdown">
-                        <a href="/shop">Shop <i class="fas fa-chevron-down"></i></a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-column">
-                                <h3>Beauty</h3>
-                                <ul>
-                                    <li><a href="/skincare">Skincare</a></li>
-                                    <li><a href="/makeup">Makeup</a></li>
-                                    <li><a href="/haircare">Haircare</a></li>
-                                    <li><a href="/fragrances">Fragrances</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h3>Fashion</h3>
-                                <ul>
-                                    <li><a href="/womens-clothing">Women's Clothing</a></li>
-                                    <li><a href="/mens-clothing">Men's Clothing</a></li>
-                                    <li><a href="/accessories">Accessories</a></li>
-                                    <li><a href="/jewelry">Jewelry</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h3>Health & Wellness</h3>
-                                <ul>
-                                    <li><a href="/vitamins">Vitamins</a></li>
-                                    <li><a href="/supplements">Supplements</a></li>
-                                    <li><a href="/personal-care">Personal Care</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h3>Men's Grooming</h3>
-                                <ul>
-                                    <li><a href="/beard-care">Beard Care</a></li>
-                                    <li><a href="/shaving">Shaving</a></li>
-                                    <li><a href="/mens-skincare">Skincare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
+            if (diff <= 0) {
+                countdown.days.textContent = '00';
+                countdown.hours.textContent = '00';
+                countdown.minutes.textContent = '00';
+                countdown.seconds.textContent = '00';
+                return;
+            }
 
-                    <!-- Brand Mega Menu -->
-                    <li class="dropdown">
-                        <a href="/brands">Brands <i class="fas fa-chevron-down"></i></a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-column">
-                                <h3>Skincare Brands</h3>
-                                <ul>
-                                    <li><a href="/skincare">WB by Hemani</a></li>
-                                    <li><a href="/makeup">Saeed Ghani</a></li>
-                                    <li><a href="/haircare">BioAqua</a></li>
-                                    <li><a href="/fragrances">Dr Rashel</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h3>Makeup Brands</h3>
-                                <ul>
-                                    <li><a href="/womens-clothing">Rivaj UK</a></li>
-                                    <li><a href="/mens-clothing">Christine Cosmetics</a></li>
-                                    <li><a href="/accessories">Sweet Touch</a></li>
-                                    <li><a href="/jewelry">Glamorous Face</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h3>Haircare Brands</h3>
-                                <ul>
-                                    <li><a href="/vitamins">Dove</a></li>
-                                    <li><a href="/supplements">Sunsilk</a></li>
-                                    <li><a href="/personal-care">Vatika</a></li>
-                                    <li><a href="/personal-care">Pantene</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h3>Fragrance & Herbal Brands</h3>
-                                <ul>
-                                    <li><a href="/beard-care">J. Fragrances</a></li>
-                                    <li><a href="/shaving">Bonanza Satrangi</a></li>
-                                    <li><a href="/mens-skincare">Hemani Fragrances</a></li>
-                                    <li><a href="/mens-skincare">Amir Adnan</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="/sale">Sale</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/contactUs">Contact Us</a></li>
-                </ul>
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-            </nav>
+            countdown.days.textContent = String(days).padStart(2, '0');
+            countdown.hours.textContent = String(hours).padStart(2, '0');
+            countdown.minutes.textContent = String(minutes).padStart(2, '0');
+            countdown.seconds.textContent = String(seconds).padStart(2, '0');
+        }
 
-            <!-- User Actions -->
-            <div class="user-actions">
-                <div class="search-box">
-                    <button class="search-toggle" aria-label="Search">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <form class="search-form" action="/search" method="GET">
-                        <input type="text" placeholder="Search products..." name="q">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
-                <a href="/account" class="account-link" aria-label="Account">
-                    <i class="fas fa-user"></i>
-                </a>
-                <a href="/cart" class="cart-link" aria-label="Cart">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cart-count">0</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Mobile Overlay -->
-    <div class="mobile-overlay-container hidden" id="nav-overlay-container">
-
-        <!-- Mobile Navigation -->
-
-    </div>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Your page content goes here -->
-    </main>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Shop</h3>
-                <ul>
-                    <li><a href="/beauty">Beauty</a></li>
-                    <li><a href="/fashion">Fashion</a></li>
-                    <li><a href="/health">Health & Wellness</a></li>
-                    <li><a href="/mens-grooming">Men's Grooming</a></li>
-                    <li><a href="/new-arrivals">New Arrivals</a></li>
-                    <li><a href="/best-sellers">Best Sellers</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Customer Service</h3>
-                <ul>
-                    <li><a href="/contact">Contact Us</a></li>
-                    <li><a href="/shipping">Shipping Policy</a></li>
-                    <li><a href="/returns">Returns & Refunds</a></li>
-                    <li><a href="/faq">FAQ</a></li>
-                    <li><a href="/track-order">Track Order</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>About Us</h3>
-                <ul>
-                    <li><a href="/our-story">Our Story</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/careers">Careers</a></li>
-                    <li><a href="/privacy">Privacy Policy</a></li>
-                    <li><a href="/terms">Terms & Conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Connect With Us</h3>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                </div>
-                <div class="newsletter">
-                    <h4>Subscribe to Our Newsletter</h4>
-                    <form action="/newsletter" method="POST">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 AnnazCosmetic. All rights reserved.</p>
-            <div class="payment-methods">
-                <i class="fab fa-cc-visa"></i>
-                <i class="fab fa-cc-mastercard"></i>
-                <i class="fab fa-cc-amex"></i>
-                <i class="fab fa-cc-paypal"></i>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
 
 </html>
