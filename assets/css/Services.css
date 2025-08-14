@@ -76,3 +76,9 @@ h1 a:hover {
   color: white;
   transition: background-color 0.3s ease;
 }
+
+.disable-btn {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.6; /* Optional: make it look disabled */
+}

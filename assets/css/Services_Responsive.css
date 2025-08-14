@@ -1,0 +1,18 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 cards per row for large screens */
+  gap: 15px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Mobile: 2 cards per row */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
